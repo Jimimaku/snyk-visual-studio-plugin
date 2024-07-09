@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System;
 using Xunit;
 
@@ -22,10 +22,8 @@ namespace Snyk.VisualStudio.Extension.Tests.UI
             resourcesType.GetField("_assemblyName", BindingFlags.NonPublic | BindingFlags.Static)?
                 .SetValue(null, AssemblyName);
 
-
             resourcesType.GetField("_resourcesDirectory", BindingFlags.NonPublic | BindingFlags.Static)?
                 .SetValue(null, ResourcesDirectory);
-
 
             if (!UriParser.IsKnownScheme("pack")) 
                 // ReSharper disable once ObjectCreationAsStatement
