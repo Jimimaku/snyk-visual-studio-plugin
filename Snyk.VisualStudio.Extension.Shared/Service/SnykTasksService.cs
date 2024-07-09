@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -695,12 +695,10 @@ namespace Snyk.VisualStudio.Extension.Shared.Service
         /// </summary>
         private void FireOssScanningStartedEvent() => this.CliScanningStarted?.Invoke(this, new SnykCliScanEventArgs());
 
-
         /// <summary>
         /// Fire OSS scanning disabled event.
         /// </summary>
         private void FireOssScanningDisabledEvent() => this.OssScanningDisabled?.Invoke(this, new SnykCliScanEventArgs());
-
 
         /// <summary>
         /// Fire SnykCode scanning started event.

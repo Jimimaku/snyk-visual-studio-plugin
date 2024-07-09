@@ -1,4 +1,4 @@
-﻿namespace Snyk.VisualStudio.Extension.Shared.UI.Toolwindow
+namespace Snyk.VisualStudio.Extension.Shared.UI.Toolwindow
 {
     using System;
     using System.Diagnostics;
@@ -129,7 +129,6 @@
             ThreadHelper.JoinableTaskFactory.Run(async () =>
             {
                 await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
-
 
                 this.resultsTree.CliRootNode.State = RootTreeNodeState.Disabled;
                 this.resultsTree.CliRootNode.Clean();
