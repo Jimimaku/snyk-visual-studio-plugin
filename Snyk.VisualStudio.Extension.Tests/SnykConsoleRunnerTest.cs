@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using Moq;
 using Snyk.Common.Authentication;
@@ -10,7 +10,6 @@ namespace Snyk.VisualStudio.Extension.Shared.Tests
 {
     public class SnykConsoleRunnerTest
     {
-
         [Fact]
         public void SnykConsoleRunnerTest_CreateProcess_Respects_Analytics_Off_IsAnalyticsNotPermitted()
         {
