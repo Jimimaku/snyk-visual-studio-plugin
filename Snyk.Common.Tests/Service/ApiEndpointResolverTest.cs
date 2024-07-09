@@ -95,7 +95,6 @@ namespace Snyk.Common.Tests.Service
                 }
             };
 
-
             var optionsMock = new Mock<ISnykOptions>();
             optionsMock
                 .Setup(options => options.SastSettings)
