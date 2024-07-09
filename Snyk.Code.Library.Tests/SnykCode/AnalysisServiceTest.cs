@@ -1,4 +1,4 @@
-﻿namespace Snyk.Code.Library.Tests.SnykCode
+namespace Snyk.Code.Library.Tests.SnykCode
 {
     using System;
     using System.Collections.Generic;
@@ -82,7 +82,6 @@
             codeClientMock
                 .Verify(codeClient => codeClient.GetAnalysisAsync(dummyBundleId, It.IsAny<CancellationToken>()), Times.Exactly(24));
         }
-
 
         [Fact]
         public async Task AnalysisService_TwoFilesWithIssuesProvided_GetAnalysisSuccessAsync()
