@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.Composition;
+using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.ComponentModelHost;
 using Microsoft.VisualStudio.Shell;
 
@@ -23,7 +23,6 @@ namespace Snyk.VisualStudio.Extension.Language
             {
                 /// do nothing
             }
-            
         }
     }
 }

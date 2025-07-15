@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -731,7 +731,6 @@ namespace Snyk.VisualStudio.Extension.Service
                 var fileDestinationPath = SnykCli.GetCliFilePath(options.CliCustomPath);
 
                 return cliDownloader.IsCliDownloadNeeded(fileDestinationPath);
-
             }
             catch (Exception)
             {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
@@ -75,7 +75,6 @@ namespace Snyk.VisualStudio.Extension.Language
                     break;
                 default:
                     throw new InvalidProductTypeException();
-
             }
         }
 
