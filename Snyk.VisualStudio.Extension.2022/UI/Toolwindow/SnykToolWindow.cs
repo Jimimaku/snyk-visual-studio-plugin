@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Runtime.InteropServices;
@@ -62,7 +62,6 @@ namespace Snyk.VisualStudio.Extension.UI.Toolwindow
                 toolWindowControl.InitializeEventListeners(serviceProvider);
                 toolWindowControl.Initialize(serviceProvider);
             });
-
         }
 
         /// <summary>
