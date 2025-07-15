@@ -1,6 +1,5 @@
-﻿namespace Snyk.VisualStudio.Extension.Analytics;
+namespace Snyk.VisualStudio.Extension.Analytics;
 
 public interface IAbstractAnalyticsEvent
 {
-    
 }
