@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -720,7 +720,6 @@ namespace Snyk.VisualStudio.Extension.UI.Toolwindow
                 {
                     baseBranchTreeNode.Title = $"Base branch: {folderConfig.BaseBranch}";
                 }
-                    
             }
             else
             {
@@ -859,7 +858,6 @@ namespace Snyk.VisualStudio.Extension.UI.Toolwindow
                     }
                     catch (Exception)
                     {
-
                     }
                 }
 
