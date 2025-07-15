@@ -1,4 +1,4 @@
-﻿using System.Windows;
+using System.Windows;
 using System.Windows.Navigation;
 using Microsoft.VisualStudio.Shell;
 using Snyk.VisualStudio.Extension.UI.Html;
@@ -35,7 +35,6 @@ namespace Snyk.VisualStudio.Extension.UI.Toolwindow
             }
             catch
             {
-
             }
         }
         public void SetContent(string html, string product)
@@ -65,7 +64,6 @@ namespace Snyk.VisualStudio.Extension.UI.Toolwindow
                 SummaryHtmlViewer.InvalidateVisual();
                 SummaryHtmlViewer.UpdateLayout();
             });
-            
         }
     }
 }

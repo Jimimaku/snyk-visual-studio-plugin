@@ -1,4 +1,4 @@
-﻿using Snyk.VisualStudio.Extension.Service;
+using Snyk.VisualStudio.Extension.Service;
 using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
@@ -54,7 +54,6 @@ namespace Snyk.VisualStudio.Extension.UI.Toolwindow
                 this.serviceProvider.Options.EnableDeltaFindings = isEnabled;
                 this.serviceProvider.SnykOptionsManager.Save(this.serviceProvider.Options);
                 await LanguageClientHelper.LanguageClientManager().DidChangeConfigurationAsync(SnykVSPackage.Instance.DisposalToken);
-
             }).FireAndForget();
         }
         public void GenerateFixes(string value)
