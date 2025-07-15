@@ -1,4 +1,4 @@
-﻿using System.Windows;
+using System.Windows;
 using Microsoft.VisualStudio.PlatformUI;
 
 namespace Snyk.VisualStudio.Extension.Theme
@@ -86,7 +86,7 @@ namespace Snyk.VisualStudio.Extension.Theme
         public static bool IsDarkTheme()
         {
             var backgroundColor = VSColorTheme.GetThemedColor(EnvironmentColors.ToolWindowBackgroundColorKey);
-            var luminance = (0.299 * backgroundColor.R + 0.587 * backgroundColor.G + 0.114 * backgroundColor.B) / 255;
+            var luminance = ((0.299 * backgroundColor.R) + (0.587 * backgroundColor.G) + (0.114 * backgroundColor.B)) / 255;
             return luminance < 0.5;
         }
 
