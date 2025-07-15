@@ -145,7 +145,6 @@ namespace Snyk.VisualStudio.Extension.UI.Toolwindow
                         await this.ServiceProvider.LanguageClientManager.DidChangeConfigurationAsync(SnykVSPackage
                             .Instance.DisposalToken);
                     }).FireAndForget();
-                    
                 }
                 catch (ArgumentException ex)
                 {
