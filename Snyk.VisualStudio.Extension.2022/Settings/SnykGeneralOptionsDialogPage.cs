@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using System.IO;
 using System.Runtime.InteropServices;
@@ -238,6 +238,5 @@ namespace Snyk.VisualStudio.Extension.Settings
                 Logger.Error(e, "Couldn't execute Invoke Login through LS.");
             }
         }
-
     }
 }
