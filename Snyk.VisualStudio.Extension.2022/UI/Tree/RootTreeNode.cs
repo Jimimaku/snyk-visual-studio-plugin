@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -175,7 +175,7 @@ namespace Snyk.VisualStudio.Extension.UI.Tree
 
             if (severityDict.Sum(pair => pair.Value) > 0)
             {
-                titleBuilder.Append(":");
+                titleBuilder.Append(':');
 
                 foreach (var severityNameToIntPair in severityDict)
                 {

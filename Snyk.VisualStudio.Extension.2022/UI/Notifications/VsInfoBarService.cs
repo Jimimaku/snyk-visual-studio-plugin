@@ -1,4 +1,4 @@
-﻿namespace Snyk.VisualStudio.Extension.UI
+namespace Snyk.VisualStudio.Extension.UI
 {
     using System.Collections.Generic;
     using System.Diagnostics;
@@ -61,12 +61,12 @@
             {
                 await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
 
-                if (ContactSupport == actionItem.ActionContext.ToString())
+                if (actionItem.ActionContext.ToString() == ContactSupport)
                 {
                     Process.Start(SupportLink);
                 }
 
-                if (KnownCaveats == actionItem.ActionContext.ToString())
+                if (actionItem.ActionContext.ToString() == KnownCaveats)
                 {
                     Process.Start(KnownCaveatsLink);
                 }
@@ -118,7 +118,7 @@
             var text = new InfoBarTextSpan(message);
 
             var spans = new InfoBarTextSpan[] { text };
-            var actions = new InfoBarActionItem[]{};
+            var actions = System.Array.Empty<InfoBarActionItem>();
             var infoBarModel = new InfoBarModel(spans, actions, KnownMonikers.StatusInformation, isCloseButtonVisible: true);
 
             var factory = await this.serviceProvider.GetServiceAsync(typeof(SVsInfoBarUIFactory)) as IVsInfoBarUIFactory;

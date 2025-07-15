@@ -1,6 +1,5 @@
-﻿namespace Snyk.VisualStudio.Extension.UI.Tree
+namespace Snyk.VisualStudio.Extension.UI.Tree
 {
-
     /// <summary>
     /// SnykCode Security root tree node.
     /// </summary>
