@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System;
 using Snyk.VisualStudio.Extension.UI;
 using Xunit;
@@ -29,7 +29,6 @@ namespace Snyk.VisualStudio.Extension.Tests.UI
                 .SetValue(null, ResourcesDirectory);
 
             sp.Reset();
-
         }
 
         [Fact]
