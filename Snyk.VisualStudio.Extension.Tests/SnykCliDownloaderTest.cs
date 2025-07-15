@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Threading.Tasks;
 using Moq;
@@ -26,7 +26,6 @@ namespace Snyk.VisualStudio.Extension.Tests
         [Fact]
         public async Task SnykCliDownloader_ExistingCliFilesNotCorruptedWhenDownloadFails_SuccessAsync()
         {
-            
             var cliDownloader = new SnykCliDownloader(optionsMock.Object);
 
             var tempCliPath = Path.Combine(Path.GetTempPath(), SnykCli.CliFileName);
