@@ -1,4 +1,4 @@
-﻿using System.Threading.Tasks;
+using System.Threading.Tasks;
 
 namespace Snyk.VisualStudio.Extension.Settings;
 
@@ -21,5 +21,4 @@ public interface ISnykOptionsManager
     /// <param name="additionalOptions">CLI options string.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
     Task SaveAdditionalOptionsAsync(string additionalOptions);
-
 }

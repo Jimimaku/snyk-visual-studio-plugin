@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Microsoft.VisualStudio.Shell;
@@ -44,5 +44,4 @@ public class SnykScanOptionsDialogPage : DialogPage, ISnykScanOptionsDialogPage
     {
         // do nothing
     }
-
 }
