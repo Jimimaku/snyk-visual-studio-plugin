@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows.Forms;
@@ -15,7 +15,6 @@ namespace Snyk.VisualStudio.Extension.Settings
         private readonly ISnykServiceProvider serviceProvider;
         private static readonly ILogger Logger = LogManager.ForContext<SnykScanOptionsUserControl>();
         public ISnykOptions OptionsMemento { get; set; }
-
 
         public SnykScanOptionsUserControl(ISnykServiceProvider serviceProvider)
         {
@@ -92,6 +91,5 @@ namespace Snyk.VisualStudio.Extension.Settings
 
         private void SnykCodeSettingsLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
             => Process.Start(OptionsMemento.SnykCodeSettingsUrl);
-
     }
 }

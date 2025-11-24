@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Snyk.VisualStudio.Extension.Authentication;
 using Snyk.VisualStudio.Extension.Language;
 
@@ -36,7 +36,6 @@ public interface IPersistableOptions
     /// Gets or sets a value indicating whether CLI organization parameter.
     /// </summary>
     string Organization { get; set; }
-
 
     /// <summary>
     /// Gets or sets a value indicating whether CLI ignore unknown CA parameter.

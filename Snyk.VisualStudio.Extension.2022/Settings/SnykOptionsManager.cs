@@ -1,4 +1,4 @@
-﻿using Snyk.VisualStudio.Extension.Authentication;
+using Snyk.VisualStudio.Extension.Authentication;
 using Snyk.VisualStudio.Extension.Service;
 using System.Threading.Tasks;
 using Serilog;
@@ -186,7 +186,6 @@ namespace Snyk.VisualStudio.Extension.Settings
             serviceProvider.Options.Organization = organization;
             return Task.CompletedTask;
         }
-
 
         /// <summary>           
         /// Get auto-determined organization.
