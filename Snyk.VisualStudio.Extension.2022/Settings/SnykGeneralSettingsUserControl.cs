@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -114,7 +114,6 @@ namespace Snyk.VisualStudio.Extension.Settings
             this.authType.SelectedValue = snykOptions.AuthenticationMethod;
         }
 
-        
         private IEnumerable<object> AuthenticationMethodList()
         {
             return Enum.GetValues(typeof(AuthenticationType))
@@ -197,7 +196,6 @@ namespace Snyk.VisualStudio.Extension.Settings
             Logger.Information("Start run task");
             await TaskScheduler.Default;
 
-
             if (SnykCli.IsCliFileFound(serviceProvider.Options.CliCustomPath))
             {
                 serviceProvider.GeneralOptionsDialogPage.Authenticate();
@@ -233,7 +231,6 @@ namespace Snyk.VisualStudio.Extension.Settings
         {
             snykOptions.IgnoreUnknownCA = this.ignoreUnknownCACheckBox.Checked;
         }
-
 
         private void TokenTextBox_Validating(object sender, CancelEventArgs cancelEventArgs) =>
             ThreadHelper.JoinableTaskFactory.RunAsync(async () =>
@@ -273,7 +270,6 @@ namespace Snyk.VisualStudio.Extension.Settings
             cancelEventArgs.Cancel = true;
             this.errorProvider.SetError(this.customEndpointTextBox, "Needs to be a full absolute well-formed URL (including protocol)");
         }
-       
 
         private void authType_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -281,7 +277,6 @@ namespace Snyk.VisualStudio.Extension.Settings
             if(LanguageClientHelper.IsLanguageServerReady())
                 LanguageClientHelper.LanguageClientManager().DidChangeConfigurationAsync(SnykVSPackage.Instance.DisposalToken).FireAndForget();
         }
-
 
         public Panel GetPanel()
         {
@@ -296,7 +291,6 @@ namespace Snyk.VisualStudio.Extension.Settings
 
         private void organizationDescriptionText_TextChanged(object sender, EventArgs e)
         {
-
         }
     }
 }

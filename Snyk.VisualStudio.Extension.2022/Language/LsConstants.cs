@@ -1,4 +1,4 @@
-﻿namespace Snyk.VisualStudio.Extension.Language
+namespace Snyk.VisualStudio.Extension.Language
 {
     public static class LsConstants
     {
@@ -32,7 +32,6 @@
         public const string SnykCodeFixDiffs = "snyk.code.fixDiffs";
         public const string SnykCodeFixApplyEdit = "snyk.code.fixApplyEdit";
         public const string SnykSubmitIgnoreRequest = "snyk.submitIgnoreRequest";
-
 
         public const string ShowDocument = "window/showDocument";
         // Feature flags

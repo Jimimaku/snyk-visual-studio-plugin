@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -105,7 +105,6 @@ namespace Snyk.VisualStudio.Extension.UI.Toolwindow
             tasksService.IacScanningDisabled += OnIacScanningDisabled;
             tasksService.IacScanningUpdate += OnIacScanningUpdate;
             tasksService.IacScanningFinished += (sender, args) => ThreadHelper.JoinableTaskFactory.RunAsync(this.OnIacScanningFinishedAsync);
-
 
             tasksService.ScanningCancelled += this.OnScanningCancelled;
             tasksService.TaskFinished += (sender, args) => ThreadHelper.JoinableTaskFactory.RunAsync(this.OnTaskFinishedAsync);
@@ -318,7 +317,6 @@ namespace Snyk.VisualStudio.Extension.UI.Toolwindow
             {
                 await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
 
-
                 this.resultsTree.IacRootNode.State = RootTreeNodeState.Disabled;
                 this.resultsTree.IacRootNode.Clean();
             });
@@ -330,12 +328,10 @@ namespace Snyk.VisualStudio.Extension.UI.Toolwindow
             {
                 await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
 
-
                 this.resultsTree.OssRootNode.State = RootTreeNodeState.Disabled;
                 this.resultsTree.OssRootNode.Clean();
             });
         }
-
 
         /// <summary>
         /// AfterBackgroundSolutionLoadComplete event handler. Switch context to RunScanState.
@@ -373,7 +369,6 @@ namespace Snyk.VisualStudio.Extension.UI.Toolwindow
         /// <param name="sender">Source object.</param>
         /// <param name="eventArgs">Event args.</param>
         public void OnIacScanningUpdate(object sender, SnykCodeScanEventArgs eventArgs) => this.AppendSnykIacResultToTree(eventArgs.Result);
-
 
         /// <summary>
         /// Cli ScanningStarted event handler..
@@ -704,7 +699,6 @@ namespace Snyk.VisualStudio.Extension.UI.Toolwindow
                 {
                     baseBranchTreeNode.Title = $"Base branch: {folderConfig.BaseBranch}";
                 }
-                    
             }
             else
             {
@@ -772,7 +766,6 @@ namespace Snyk.VisualStudio.Extension.UI.Toolwindow
             });
         }
 
-
         /// <summary>
         /// Update progress bar.
         /// </summary>
@@ -830,7 +823,6 @@ namespace Snyk.VisualStudio.Extension.UI.Toolwindow
                     }
                     catch (Exception)
                     {
-
                     }
                 }
 
@@ -1038,7 +1030,6 @@ namespace Snyk.VisualStudio.Extension.UI.Toolwindow
             var issue = snykCodeTreeNode.Issue;
             FillHtmlPanel(issue.Id, Product.Code, issue.AdditionalData?.Details);
 
-
             VsCodeService.Instance.OpenAndNavigate(
                 issue.FilePath,
                 issue.Range.Start.Line,
@@ -1059,7 +1050,6 @@ namespace Snyk.VisualStudio.Extension.UI.Toolwindow
             
             var issue = iacTreeNode.Issue;
             FillHtmlPanel(issue.Id, Product.Iac, issue.AdditionalData?.CustomUIContent);
-
 
             VsCodeService.Instance.OpenAndNavigate(
                 issue.FilePath,

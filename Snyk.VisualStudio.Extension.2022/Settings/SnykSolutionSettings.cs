@@ -1,4 +1,4 @@
-﻿namespace Snyk.VisualStudio.Extension.Settings
+namespace Snyk.VisualStudio.Extension.Settings
 {
     /// <summary>
     /// Contains project/solution settings for Snyk.
@@ -22,7 +22,6 @@
         /// Gets or sets organization for project.
         /// </summary>
         public string Organization { get; set; }
-
 
         /// <summary>
         /// Gets or sets the auto-determined organization from folder config.

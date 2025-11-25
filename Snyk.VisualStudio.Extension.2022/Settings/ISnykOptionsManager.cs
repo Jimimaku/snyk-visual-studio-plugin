@@ -1,4 +1,4 @@
-﻿using System.Threading.Tasks;
+using System.Threading.Tasks;
 
 namespace Snyk.VisualStudio.Extension.Settings
 {
@@ -34,7 +34,6 @@ namespace Snyk.VisualStudio.Extension.Settings
     /// <param name="organization">Organization string.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
     Task SaveOrganizationAsync(string organization);
-
 
     /// <summary>
     /// Get auto-determined organization.

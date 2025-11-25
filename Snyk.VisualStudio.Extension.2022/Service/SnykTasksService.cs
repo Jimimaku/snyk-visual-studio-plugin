@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -65,7 +65,6 @@ namespace Snyk.VisualStudio.Extension.Service
         /// Scanning OSS finished event handler.
         /// </summary>
         public event EventHandler<SnykOssScanEventArgs> OssScanningFinished;
-
 
         /// <summary>
         /// Cli scan error event handler.
@@ -482,7 +481,6 @@ namespace Snyk.VisualStudio.Extension.Service
             => this.IacScanningDisabled?.Invoke(this,
                 new SnykCodeScanEventArgs { LocalCodeEngineEnabled = localCodeEngineEnabled, });
 
-
         /// <summary>
         /// Fire download started.
         /// </summary>
@@ -570,12 +568,10 @@ namespace Snyk.VisualStudio.Extension.Service
             this.OssScanningStarted?.Invoke(this, new SnykOssScanEventArgs());
         }
 
-
         /// <summary>
         /// Fire OSS scanning disabled event.
         /// </summary>
         private void FireOssScanningDisabledEvent() => this.OssScanningDisabled?.Invoke(this, new SnykOssScanEventArgs());
-
 
         /// <summary>
         /// Fire SnykCode scanning started event.
@@ -625,7 +621,6 @@ namespace Snyk.VisualStudio.Extension.Service
             this.IacScanningUpdate?.Invoke(this, new SnykCodeScanEventArgs(analysisResult));
         }
 
-
         /// <summary>
         /// Fire OSS scanning finished event.
         /// </summary>
@@ -645,7 +640,6 @@ namespace Snyk.VisualStudio.Extension.Service
             this.SnykCodeScanningFinished?.Invoke(this,
                 new SnykCodeScanEventArgs { OssScanRunning = this.IsOssScanning });
         }
-
 
         public void FireIacScanningFinishedEvent()
         {
@@ -714,14 +708,12 @@ namespace Snyk.VisualStudio.Extension.Service
                 var fileDestinationPath = SnykCli.GetCliFilePath(options.CliCustomPath);
 
                 return cliDownloader.IsCliDownloadNeeded(fileDestinationPath);
-
             }
             catch (Exception)
             {
                 return true;
             }
         }
-
 
         private async Task DownloadAsync(CliDownloadFinishedCallback downloadFinishedCallback,
             ISnykProgressWorker progressWorker)
