@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Diagnostics;
@@ -330,7 +330,6 @@ namespace Snyk.VisualStudio.Extension.Language
             var res = await InvokeWithParametersAsync<object>(LsConstants.WorkspaceExecuteCommand, param, cancellationToken);
             return res;
         }
-
 
         public async Task<SastSettings> InvokeGetSastEnabled(CancellationToken cancellationToken)
         {

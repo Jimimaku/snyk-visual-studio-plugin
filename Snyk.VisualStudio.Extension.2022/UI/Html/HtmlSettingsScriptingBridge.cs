@@ -433,6 +433,5 @@ namespace Snyk.VisualStudio.Extension.UI.Html
                 throw;
             }
         }
-
     }
 }

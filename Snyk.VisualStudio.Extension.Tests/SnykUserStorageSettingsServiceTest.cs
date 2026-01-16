@@ -1,4 +1,4 @@
-﻿using System.IO;
+using System.IO;
 using System.Threading.Tasks;
 using Moq;
 using Snyk.VisualStudio.Extension.Authentication;
@@ -38,7 +38,6 @@ namespace Snyk.VisualStudio.Extension.Tests
             solutionServiceMock
                 .Setup(solutionService => solutionService.GetSolutionFolderAsync())
                 .ReturnsAsync("C:\\Projects\\TestProj");
-
 
             await cut.SaveAdditionalOptionsAsync("--test-command");
 

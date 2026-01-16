@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
@@ -39,7 +39,6 @@ namespace Snyk.VisualStudio.Extension.Download
         /// </summary>
         public delegate void CliDownloadFinishedCallback();
 
-
         /// <summary>
         /// Request last cli information.
         /// </summary>
@@ -65,7 +64,6 @@ namespace Snyk.VisualStudio.Extension.Download
                 };
             }
         }
-
 
         /// <summary>
         /// Compare CLI versions and if new version string is more new to current version method will return true.
@@ -284,7 +282,7 @@ namespace Snyk.VisualStudio.Extension.Download
 
                         do
                         {
-                            var read = await contentStream.ReadAsync(buffer, 0, buffer.Length);
+                            var read = await contentStream.ReadAsync(buffer);
 
                             if (read == 0)
                             {
