@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
@@ -192,7 +192,6 @@ namespace Snyk.VisualStudio.Extension
                 Logger.Information("Start InitializeGeneralOptionsAsync.");
                 
                 await InitializeOptionsAsync();
-
 
                 // Initialize LS
                 Logger.Information("Initializing Language Server");

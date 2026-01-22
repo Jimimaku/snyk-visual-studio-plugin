@@ -1,4 +1,4 @@
-﻿// ABOUTME: This file implements the WinForms user control for experimental feature settings
+// ABOUTME: This file implements the WinForms user control for experimental feature settings
 // ABOUTME: It provides UI for configuring preview features like delta findings and consistent ignores
 using System;
 using System.Windows.Forms;
@@ -66,6 +66,5 @@ namespace Snyk.VisualStudio.Extension.Settings
                     System.Windows.MessageBoxImage.Error);
             }
         }
-
     }
 }

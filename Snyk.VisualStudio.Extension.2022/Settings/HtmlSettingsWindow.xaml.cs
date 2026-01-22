@@ -325,6 +325,5 @@ namespace Snyk.VisualStudio.Extension.Settings
 
             base.OnClosed(e);
         }
-
     }
 }
