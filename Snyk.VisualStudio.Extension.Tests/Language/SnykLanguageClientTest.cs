@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
@@ -81,7 +81,6 @@ namespace Snyk.VisualStudio.Extension.Tests.Language
                 Times.Once);
             Assert.Null(result);
         }
-
 
         [Fact]
         public void Rpc_Disconnected_ShouldSetIsReadyToFalse()
@@ -322,7 +321,6 @@ namespace Snyk.VisualStudio.Extension.Tests.Language
             // Assert
             Assert.True(eventInvoked);
         }
-
 
         [Fact]
         public async Task InvokeLogin_ShouldReturnNull_WhenNotReady()
