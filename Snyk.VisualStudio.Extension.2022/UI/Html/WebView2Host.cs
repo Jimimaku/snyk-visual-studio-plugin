@@ -113,7 +113,7 @@ namespace Snyk.VisualStudio.Extension.UI.Html
 
             _ = OrphanCleanupOnce.Value;
 
-            var pid = Process.GetCurrentProcess().Id;
+            var pid = Environment.ProcessId;
             return Path.Combine(
                 Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
                 "Snyk", "WebView2", pid.ToString(), contextKey);
@@ -162,7 +162,7 @@ namespace Snyk.VisualStudio.Extension.UI.Html
 
             if (!Directory.Exists(root)) return;
 
-            var currentPid = Process.GetCurrentProcess().Id;
+            var currentPid = Environment.ProcessId;
             foreach (var dir in Directory.GetDirectories(root))
             {
                 var name = Path.GetFileName(dir);

@@ -34,8 +34,8 @@ namespace Snyk.VisualStudio.Extension.UI.Html
         public WebView2MessageDispatcher Register(string method, int expectedArgCount, Action<JArray> handler)
         {
             if (string.IsNullOrEmpty(method)) throw new ArgumentException("Method name is required", nameof(method));
-            if (expectedArgCount < 0) throw new ArgumentOutOfRangeException(nameof(expectedArgCount));
-            if (handler == null) throw new ArgumentNullException(nameof(handler));
+            ArgumentOutOfRangeException.ThrowIfNegative(expectedArgCount);
+            ArgumentNullException.ThrowIfNull(handler);
 
             _handlers[method] = new Registration { ExpectedArgCount = expectedArgCount, Handler = handler };
             return this;

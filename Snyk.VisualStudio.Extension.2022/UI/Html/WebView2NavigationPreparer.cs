@@ -52,7 +52,7 @@ namespace Snyk.VisualStudio.Extension.UI.Html
         public WebView2NavigationPreparer(string scratchDirectory, int inlineSizeLimitBytes = DefaultInlineSizeLimitBytes)
         {
             if (string.IsNullOrEmpty(scratchDirectory)) throw new ArgumentException("Scratch directory is required", nameof(scratchDirectory));
-            if (inlineSizeLimitBytes <= 0) throw new ArgumentOutOfRangeException(nameof(inlineSizeLimitBytes));
+            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(inlineSizeLimitBytes);
 
             _scratchDirectory = scratchDirectory;
             _inlineSizeLimitBytes = inlineSizeLimitBytes;
@@ -63,7 +63,7 @@ namespace Snyk.VisualStudio.Extension.UI.Html
 
         public NavigationPayload Prepare(string html)
         {
-            if (html == null) throw new ArgumentNullException(nameof(html));
+            ArgumentNullException.ThrowIfNull(html);
 
             var byteCount = Encoding.UTF8.GetByteCount(html);
             if (byteCount <= _inlineSizeLimitBytes)
