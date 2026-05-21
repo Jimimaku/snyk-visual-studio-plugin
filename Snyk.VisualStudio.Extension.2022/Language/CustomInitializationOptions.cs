@@ -1,4 +1,4 @@
-﻿// ABOUTME: This file defines initialization options and configuration structures for the Snyk Language Server protocol
+// ABOUTME: This file defines initialization options and configuration structures for the Snyk Language Server protocol
 // ABOUTME: It contains data models for folder configs, scan commands, and initialization parameters sent to the Language Server
 using System.Collections.Generic;
 using Newtonsoft.Json;
@@ -54,5 +54,4 @@ namespace Snyk.VisualStudio.Extension.Language
     {
         public string ScanSummary { get; set; }
     }
-
 }
