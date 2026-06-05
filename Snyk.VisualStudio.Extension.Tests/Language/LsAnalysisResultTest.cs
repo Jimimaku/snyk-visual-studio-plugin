@@ -46,7 +46,6 @@ namespace Snyk.VisualStudio.Extension.Tests.Language
             Assert.Contains("XSS", result);
         }
 
-
         [Theory]
         [InlineData("critical", 4_000_000)]
         [InlineData("high", 3_000_000)]
