@@ -1,4 +1,4 @@
-﻿namespace Snyk.VisualStudio.Extension.Service.Domain
+namespace Snyk.VisualStudio.Extension.Service.Domain
 {
     /// <summary>
     /// Settings for enabled/disabled features (OSS, Code, IaC).
@@ -14,7 +14,6 @@
         /// Gets or sets a value indicating whether IaC enabled.
         /// </summary>
         public bool IacEnabled { get; set; }
-
 
         /// <summary>
         /// Gets or sets a value indicating whether Sast on server enabled.
