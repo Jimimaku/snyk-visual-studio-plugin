@@ -1,4 +1,4 @@
-﻿// ABOUTME: This file implements custom JSON-RPC message handlers for the Snyk Language Client
+// ABOUTME: This file implements custom JSON-RPC message handlers for the Snyk Language Client
 // ABOUTME: It processes diagnostics, authentication, and scan results from the Language Server
 using System;
 using System.Collections.Generic;
@@ -161,8 +161,8 @@ namespace Snyk.VisualStudio.Extension.Language
                 var separatorIndex = pair.IndexOf('=');
                 if (separatorIndex <= 0) continue;
 
-                var key = Uri.UnescapeDataString(pair.Substring(0, separatorIndex));
-                var value = Uri.UnescapeDataString(pair.Substring(separatorIndex + 1));
+                var key = Uri.UnescapeDataString(pair.AsSpan(0, separatorIndex));
+                var value = Uri.UnescapeDataString(pair.AsSpan(separatorIndex + 1));
                 result[key] = value;
             }
             return result;
