@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using Moq;
@@ -104,7 +104,6 @@ namespace Snyk.VisualStudio.Extension.Tests.Service
         {
             var presentFolder = "C:\\Users\\Project";
             optionsMock.Setup(s => s.TrustedFolders).Returns(new HashSet<string> { presentFolder });
-
 
             var newFolderPath = this.CreateTempDirectory();
 
