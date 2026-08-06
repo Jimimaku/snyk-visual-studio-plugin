@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
@@ -88,7 +88,7 @@ namespace Snyk.VisualStudio.Extension.Download
             var normalised = configuredBaseDownloadUrl?.Trim().TrimEnd('/', '\\');
 
             // A scheme with no authority ("https://" -> "https:") is unusable for the same reason.
-            if (string.IsNullOrWhiteSpace(normalised) || normalised.EndsWith(":", StringComparison.Ordinal))
+            if (string.IsNullOrWhiteSpace(normalised) || normalised.EndsWith(':'))
             {
                 return DefaultBaseDownloadUrl;
             }
@@ -200,7 +200,6 @@ namespace Snyk.VisualStudio.Extension.Download
                 };
             }
         }
-
 
         /// <summary>
         /// The published checksum for a download URL, fetched once per downloader instance. Memoised for
@@ -417,7 +416,6 @@ namespace Snyk.VisualStudio.Extension.Download
                 return !protocolSupported;
             }
         }
-
 
         /// <summary>
         /// Check is CLI file not exists by provided location.
@@ -890,7 +888,7 @@ namespace Snyk.VisualStudio.Extension.Download
 
                             do
                             {
-                                var read = await contentStream.ReadAsync(buffer, 0, buffer.Length);
+                                var read = await contentStream.ReadAsync(buffer);
 
                                 if (read == 0)
                                 {

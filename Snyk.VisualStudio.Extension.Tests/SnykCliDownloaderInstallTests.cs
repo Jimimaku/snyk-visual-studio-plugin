@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -438,7 +438,6 @@ namespace Snyk.VisualStudio.Extension.Tests
 
             Assert.True(cut.IsCliDownloadNeeded(missingCli));
             Assert.Equal(0, cut.ReleaseInfoFetches);
-
         }
 
         [Fact]
