@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -521,7 +521,7 @@ namespace Snyk.VisualStudio.Extension.Service
                 Logger.Error(e, "Failed to get project files from Projects object");
             }
 
-            Logger.Information("Solution files count {Count}", solutionFiles.Count());
+            Logger.Information("Solution files count {Count}", solutionFiles.Count);
 
             return solutionFiles;
         }
